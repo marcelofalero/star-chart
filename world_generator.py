@@ -3,11 +3,11 @@ import json
 import csv
 import requests
 import time
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 # --- Configuration ---
 NUM_SYSTEMS = 1000
-OLLAMA_URL = "http://localhost:11434/api/generate"
+OLLAMA_BASE_URL = "http://localhost:11434"
 MODEL_NAME = "deepseek-r1"
 
 # --- Lore Constants ---
@@ -104,6 +104,7 @@ class SystemGenerator:
 class NarrativeEngine:
     def __init__(self, use_mock=False):
         self.use_mock = use_mock
+        self.preferred_endpoint = None  # To cache the working endpoint
 
     def construct_prompt(self, physics: Dict, society: Dict) -> str:
         return f"""
@@ -141,45 +142,85 @@ class NarrativeEngine:
             "description": f"The surface of this {physics['star_type']} system glimmers with fake data. Beneath the {physics['atmosphere'].lower()} sky, the simulation rots."
         }
 
+    def _try_request(self, endpoint: str, payload: Dict) -> Optional[requests.Response]:
+        """Helper to send request and return response if successful."""
+        url = f"{OLLAMA_BASE_URL}{endpoint}"
+        try:
+            response = requests.post(url, json=payload, timeout=30)
+            if response.status_code == 200:
+                return response
+            else:
+                print(f"Endpoint {endpoint} returned {response.status_code}: {response.text[:100]}...")
+                return None
+        except requests.RequestException as e:
+            print(f"Error connecting to {endpoint}: {e}")
+            return None
+
     def generate_narrative(self, physics: Dict, society: Dict) -> Dict[str, str]:
         if self.use_mock:
             return self.generate_mock_narrative(physics, society)
 
         prompt = self.construct_prompt(physics, society)
-        payload = {
+
+        # Strategies for generation
+        strategies = []
+
+        # Strategy 1: /api/generate (Raw completion)
+        strategies.append(("/api/generate", {
             "model": MODEL_NAME,
             "prompt": prompt,
             "stream": False,
             "format": "json"
-        }
+        }))
+
+        # Strategy 2: /api/chat (Chat completion)
+        strategies.append(("/api/chat", {
+            "model": MODEL_NAME,
+            "messages": [{"role": "user", "content": prompt}],
+            "stream": False,
+            "format": "json"
+        }))
+
+        # If we have a preferred endpoint, prioritize it
+        if self.preferred_endpoint:
+             # Find the strategy matching the preferred endpoint and move it to front
+             strategies.sort(key=lambda x: x[0] != self.preferred_endpoint)
 
         retries = 3
         for attempt in range(retries):
-            try:
-                response = requests.post(OLLAMA_URL, json=payload, timeout=30)
-                if response.status_code == 200:
+            for endpoint, payload in strategies:
+                response = self._try_request(endpoint, payload)
+
+                if response:
+                    self.preferred_endpoint = endpoint
                     data = response.json()
-                    content = data.get("response", "")
+
+                    # Handle different response structures
+                    content = ""
+                    if endpoint == "/api/generate":
+                        content = data.get("response", "")
+                    elif endpoint == "/api/chat":
+                        message = data.get("message", {})
+                        content = message.get("content", "")
 
                     # Parse JSON
                     try:
                         narrative_data = json.loads(content)
                     except json.JSONDecodeError:
-                        print(f"JSON Decode Error on attempt {attempt+1}. Retrying...")
+                        print(f"JSON Decode Error on attempt {attempt+1} from {endpoint}. Retrying...")
                         continue
 
                     # Safety Valve Check
                     combined_text = str(narrative_data).lower()
                     if any(bad_word in combined_text for bad_word in FORBIDDEN_KEYWORDS):
                         print(f"Safety Valve Triggered: Found forbidden trope. Re-rolling...")
-                        continue # Retry
+                        continue # Retry outer loop
 
                     return narrative_data
-                else:
-                    print(f"API Error: {response.status_code}")
-            except requests.RequestException as e:
-                print(f"Connection Error: {e}")
-                break # If connection fails, likely no LLM running.
+
+            # If both strategies failed for this attempt, wait a bit before retry
+            print(f"Attempt {attempt+1} failed on all endpoints.")
+            time.sleep(1)
 
         print("Falling back to Mock Data due to failures.")
         return self.generate_mock_narrative(physics, society)
@@ -190,8 +231,9 @@ def main():
     # Check connectivity
     use_mock = False
     try:
-        requests.get("http://localhost:11434", timeout=1)
-        print("Connected to Ollama.")
+        # Check if Ollama is running generally
+        requests.get(OLLAMA_BASE_URL, timeout=1)
+        print(f"Connected to Ollama at {OLLAMA_BASE_URL}.")
     except requests.RequestException:
         print("Could not connect to Ollama. Using Mock Mode.")
         use_mock = True
