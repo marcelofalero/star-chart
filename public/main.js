@@ -1474,8 +1474,9 @@ async function loadStationAssets() {
                 if (child.isMesh) {
                     child.material = new THREE.MeshStandardMaterial({
                         map: tex,
-                        roughness: 0.4,
-                        metalness: 0.6,
+                        emissiveMap: tex,
+                        roughness: 0.8,
+                        metalness: 0.1,
                         emissive: 0x222222
                     });
                 }
