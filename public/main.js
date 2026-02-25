@@ -3,6 +3,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 
 // ──────────────────────────────────────────────────────────────────────────────
 // Scene & Renderer
@@ -1453,6 +1454,42 @@ function removeLoadingScreen(el) {
 // Initialization
 // ──────────────────────────────────────────────────────────────────────────────
 
+let stationAssets = {};
+const stationAssetNames = ['cube', 'pyramid', 'prism', 'cylinder', 'cone', 'octahedron', 'diamond', 'star', 'cross', 'torus'];
+
+async function loadStationAssets() {
+    const loader = new OBJLoader();
+    const texLoader = new THREE.TextureLoader();
+
+    const promises = stationAssetNames.map(async name => {
+        try {
+            const [obj, tex] = await Promise.all([
+                loader.loadAsync(`models/${name}.obj`),
+                texLoader.loadAsync(`models/textures/${name}_tex.png`)
+            ]);
+
+            tex.colorSpace = THREE.SRGBColorSpace;
+
+            obj.traverse(child => {
+                if (child.isMesh) {
+                    child.material = new THREE.MeshStandardMaterial({
+                        map: tex,
+                        roughness: 0.4,
+                        metalness: 0.6,
+                        emissive: 0x222222
+                    });
+                }
+            });
+
+            stationAssets[name] = obj;
+        } catch (err) {
+            console.error(`Failed to load asset ${name}:`, err);
+        }
+    });
+
+    await Promise.all(promises);
+}
+
 async function init() {
     const loadingEl = injectLoadingScreen();
 
@@ -1461,6 +1498,7 @@ async function init() {
         fetch('data/factions.json').then(r => r.json()),
         fetch('data/planets.json').then(r => r.json()),
         fetch('data/routes.json').then(r => r.json()),
+        loadStationAssets()
     ]);
 
     factions.forEach(f => factionsData[f.factionId] = f);
