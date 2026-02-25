@@ -3,6 +3,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 
 // ──────────────────────────────────────────────────────────────────────────────
 // Scene & Renderer
@@ -591,12 +592,39 @@ function createSystemView(systemData, faction) {
 
         // Space Station
         if (!bt.isGas && rng() > 0.7) {
-            const stSize = bodyRadius * 0.4;
-            const stGeo = new THREE.CylinderGeometry(stSize, stSize, stSize * 0.6, 8);
-            const stMat = new THREE.MeshStandardMaterial({ color: faction.color, emissive: faction.glowColor, emissiveIntensity: 0.5, roughness: 0.2, metalness: 0.8 });
-            const st = new THREE.Mesh(stGeo, stMat);
+            let st;
+            const assetKeys = Object.keys(stationAssets);
+            if (assetKeys.length > 0) {
+                const randKey = assetKeys[Math.floor(rng() * assetKeys.length)];
+                st = stationAssets[randKey].clone();
+
+                // Clone material to allow faction-specific tinting
+                st.traverse(c => {
+                    if (c.isMesh) {
+                        c.material = c.material.clone();
+                        // Tint the texture with faction color
+                        c.material.color.lerp(new THREE.Color(faction.color), 0.3);
+                        // Make it glow with faction color
+                        c.material.emissive = new THREE.Color(faction.glowColor);
+                        c.material.emissiveIntensity = 0.5;
+                    }
+                });
+            } else {
+                // Fallback if assets failed to load - use Box to indicate failure clearly (vs Cylinder)
+                const stSize = bodyRadius * 0.4;
+                const stGeo = new THREE.BoxGeometry(stSize, stSize, stSize);
+                const stMat = new THREE.MeshStandardMaterial({ color: faction.color, emissive: faction.glowColor, emissiveIntensity: 0.5, roughness: 0.2, metalness: 0.8 });
+                st = new THREE.Mesh(stGeo, stMat);
+            }
+
+            const stScale = bodyRadius * 0.4;
+            st.scale.set(stScale, stScale, stScale);
+
             st.position.set(-bodyRadius * 2.2, bodyRadius * 1.5, 0);
             st.rotation.z = Math.PI / 4;
+            // Add random rotation to make them look more dynamic
+            st.rotation.x = rng() * Math.PI;
+            st.rotation.y = rng() * Math.PI;
             st.visible = false;
 
             st.userData = {
@@ -1453,6 +1481,53 @@ function removeLoadingScreen(el) {
 // Initialization
 // ──────────────────────────────────────────────────────────────────────────────
 
+let stationAssets = {};
+const stationAssetNames = ['cube', 'pyramid', 'prism', 'cylinder', 'cone', 'octahedron', 'diamond', 'star', 'cross', 'torus'];
+
+async function loadStationAssets() {
+    const loader = new OBJLoader();
+    const texLoader = new THREE.TextureLoader();
+
+    const promises = stationAssetNames.map(async name => {
+        let obj, tex;
+        try {
+            obj = await loader.loadAsync(`models/${name}.obj`);
+        } catch (err) {
+            console.error(`Failed to load model ${name}:`, err);
+            return; // Skip if model fails
+        }
+
+        try {
+            tex = await texLoader.loadAsync(`models/textures/${name}_tex.png`);
+            tex.colorSpace = THREE.SRGBColorSpace;
+        } catch (err) {
+            console.warn(`Failed to load texture for ${name}, using default:`, err);
+        }
+
+        obj.traverse(child => {
+            if (child.isMesh) {
+                // Ensure normals exist for lighting
+                child.geometry.computeVertexNormals();
+
+                child.material = new THREE.MeshStandardMaterial({
+                    map: tex || null,
+                    emissiveMap: tex || null,
+                    color: tex ? 0xffffff : 0xcccccc,
+                    roughness: 0.8,
+                    metalness: 0.1,
+                    emissive: 0x222222,
+                    side: THREE.DoubleSide
+                });
+            }
+        });
+
+        console.log(`Loaded asset: ${name}`);
+        stationAssets[name] = obj;
+    });
+
+    await Promise.all(promises);
+}
+
 async function init() {
     const loadingEl = injectLoadingScreen();
 
@@ -1461,6 +1536,7 @@ async function init() {
         fetch('data/factions.json').then(r => r.json()),
         fetch('data/planets.json').then(r => r.json()),
         fetch('data/routes.json').then(r => r.json()),
+        loadStationAssets()
     ]);
 
     factions.forEach(f => factionsData[f.factionId] = f);
