@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galactic Campaign Map — 3D Star Chart</title>
+  <meta name="description"
+    content="An interactive 3D sci-fi galactic map with faction territories, planetary systems, and spatial fold routes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.addEventListener('error', e => fetch('http://localhost:4000', { method: 'POST', body: e.message + ' ' + e.filename + ':' + e.lineno }));
+    window.addEventListener('unhandledrejection', e => fetch('http://localhost:4000', { method: 'POST', body: e.reason.stack || String(e.reason) }));
+  </script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.149.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div id="map-container"></div>
+
+  <!-- Title Bar -->
+  <div id="title-bar">
+    <h1>GALACTIC CAMPAIGN MAP</h1>
+    <p>CLASSIFIED — STAR CHART v3.7</p>
+  </div>
+
+  <!-- Planet Info Panel -->
+  <div id="info-panel" class="hidden">
+    <button id="close-panel" title="Close">✕</button>
+    <div class="panel-header">
+      <div id="faction-badge"></div>
+      <div>
+        <h2 id="planet-name"></h2>
+        <div id="planet-faction"></div>
+      </div>
+    </div>
+    <p id="planet-description"></p>
+    <div id="planet-connections"></div>
+  </div>
+
+  <!-- System Body Info Panel -->
+  <div id="body-info-panel" class="hidden">
+    <button id="close-body-panel" title="Close">✕</button>
+    <div class="panel-header">
+      <div id="body-color-badge"></div>
+      <div>
+        <h2 id="body-name"></h2>
+        <div id="body-type"></div>
+      </div>
+    </div>
+    <p id="body-description"></p>
+    <div class="body-nav">
+      <button id="prev-body-btn" class="nav-btn">← Prev</button>
+      <button id="next-body-btn" class="nav-btn">Next →</button>
+    </div>
+  </div>
+
+  <!-- Faction Legend -->
+  <div id="legend">
+    <h3>FACTIONS</h3>
+    <div id="legend-items"></div>
+  </div>
+
+  <!-- System View UI -->
+  <div id="system-ui" class="hidden">
+    <button id="system-back-btn">← Galaxy Map</button>
+    <div class="sys-header">
+      <h2 id="sys-name"></h2>
+      <div id="sys-faction"></div>
+    </div>
+    <div class="sys-meta">
+      <span class="sys-meta-label">Star</span>
+      <span id="sys-star-type"></span>
+    </div>
+    <div class="sys-meta">
+      <span class="sys-meta-label">Bodies</span>
+      <span id="sys-body-count"></span>
+    </div>
+    <p id="sys-desc"></p>
+    <div class="sys-hint">Double-click another node in galaxy view to travel</div>
+  </div>
+
+  <!-- Path HUD -->
+  <div id="path-hud" class="hidden">
+    <div id="path-summary">
+      <div id="path-status"></div>
+      <button id="path-clear-btn" title="Clear path">✕</button>
+    </div>
+    <div id="path-detail" class="hidden"></div>
+    <button id="travel-btn" class="hidden">ENGAGE TRAVEL 🚀</button>
+  </div>
+
+  <!-- Controls Hint -->
+  <div id="controls-hint">
+    🖱 Drag · Scroll to zoom · Left-click planet for info · Right-click to set path
+  </div>
+
+  <button id="global-back-btn" class="hidden">⎌ ESC / Back</button>
+
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>

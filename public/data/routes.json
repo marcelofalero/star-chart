@@ -1,0 +1,492 @@
+[
+  {
+    "routeId": 1,
+    "fromId": 1,
+    "toId": 12,
+    "security": "Medium",
+    "distance": 5.44
+  },
+  {
+    "routeId": 2,
+    "fromId": 1,
+    "toId": 46,
+    "security": "High",
+    "distance": 12.21
+  },
+  {
+    "routeId": 3,
+    "fromId": 46,
+    "toId": 38,
+    "security": "Low",
+    "distance": 10.96
+  },
+  {
+    "routeId": 4,
+    "fromId": 38,
+    "toId": 28,
+    "security": "Low",
+    "distance": 6.14
+  },
+  {
+    "routeId": 5,
+    "fromId": 28,
+    "toId": 56,
+    "security": "Medium",
+    "distance": 7.18
+  },
+  {
+    "routeId": 6,
+    "fromId": 56,
+    "toId": 6,
+    "security": "Low",
+    "distance": 9.68
+  },
+  {
+    "routeId": 7,
+    "fromId": 12,
+    "toId": 9,
+    "security": "Low",
+    "distance": 12.38
+  },
+  {
+    "routeId": 8,
+    "fromId": 9,
+    "toId": 13,
+    "security": "Low",
+    "distance": 4.25
+  },
+  {
+    "routeId": 9,
+    "fromId": 9,
+    "toId": 18,
+    "security": "Low",
+    "distance": 5.71
+  },
+  {
+    "routeId": 10,
+    "fromId": 13,
+    "toId": 25,
+    "security": "High",
+    "distance": 8.33
+  },
+  {
+    "routeId": 11,
+    "fromId": 9,
+    "toId": 59,
+    "security": "Medium",
+    "distance": 8.84
+  },
+  {
+    "routeId": 12,
+    "fromId": 25,
+    "toId": 23,
+    "security": "Medium",
+    "distance": 9.05
+  },
+  {
+    "routeId": 13,
+    "fromId": 23,
+    "toId": 20,
+    "security": "Low",
+    "distance": 11.29
+  },
+  {
+    "routeId": 14,
+    "fromId": 20,
+    "toId": 32,
+    "security": "Medium",
+    "distance": 9.39
+  },
+  {
+    "routeId": 15,
+    "fromId": 13,
+    "toId": 17,
+    "security": "Low",
+    "distance": 11.29
+  },
+  {
+    "routeId": 16,
+    "fromId": 17,
+    "toId": 41,
+    "security": "Low",
+    "distance": 9.28
+  },
+  {
+    "routeId": 17,
+    "fromId": 41,
+    "toId": 51,
+    "security": "Medium",
+    "distance": 8.29
+  },
+  {
+    "routeId": 18,
+    "fromId": 51,
+    "toId": 60,
+    "security": "Low",
+    "distance": 9.52
+  },
+  {
+    "routeId": 19,
+    "fromId": 60,
+    "toId": 42,
+    "security": "Medium",
+    "distance": 9.85
+  },
+  {
+    "routeId": 20,
+    "fromId": 51,
+    "toId": 40,
+    "security": "Medium",
+    "distance": 12.42
+  },
+  {
+    "routeId": 21,
+    "fromId": 40,
+    "toId": 27,
+    "security": "Low",
+    "distance": 10.54
+  },
+  {
+    "routeId": 22,
+    "fromId": 27,
+    "toId": 57,
+    "security": "High",
+    "distance": 5.83
+  },
+  {
+    "routeId": 23,
+    "fromId": 57,
+    "toId": 3,
+    "security": "Low",
+    "distance": 9.9
+  },
+  {
+    "routeId": 24,
+    "fromId": 57,
+    "toId": 15,
+    "security": "High",
+    "distance": 11.58
+  },
+  {
+    "routeId": 25,
+    "fromId": 15,
+    "toId": 36,
+    "security": "High",
+    "distance": 9.36
+  },
+  {
+    "routeId": 26,
+    "fromId": 36,
+    "toId": 55,
+    "security": "High",
+    "distance": 8.71
+  },
+  {
+    "routeId": 27,
+    "fromId": 36,
+    "toId": 5,
+    "security": "Low",
+    "distance": 10.33
+  },
+  {
+    "routeId": 28,
+    "fromId": 57,
+    "toId": 22,
+    "security": "High",
+    "distance": 11.71
+  },
+  {
+    "routeId": 29,
+    "fromId": 22,
+    "toId": 33,
+    "security": "Low",
+    "distance": 10.65
+  },
+  {
+    "routeId": 30,
+    "fromId": 22,
+    "toId": 53,
+    "security": "High",
+    "distance": 12.29
+  },
+  {
+    "routeId": 31,
+    "fromId": 59,
+    "toId": 31,
+    "security": "High",
+    "distance": 12.68
+  },
+  {
+    "routeId": 32,
+    "fromId": 53,
+    "toId": 37,
+    "security": "Low",
+    "distance": 12.75
+  },
+  {
+    "routeId": 33,
+    "fromId": 33,
+    "toId": 47,
+    "security": "Medium",
+    "distance": 13.13
+  },
+  {
+    "routeId": 34,
+    "fromId": 47,
+    "toId": 45,
+    "security": "Medium",
+    "distance": 10.07
+  },
+  {
+    "routeId": 35,
+    "fromId": 42,
+    "toId": 14,
+    "security": "Low",
+    "distance": 13.35
+  },
+  {
+    "routeId": 36,
+    "fromId": 14,
+    "toId": 43,
+    "security": "High",
+    "distance": 6.72
+  },
+  {
+    "routeId": 37,
+    "fromId": 43,
+    "toId": 4,
+    "security": "High",
+    "distance": 8.07
+  },
+  {
+    "routeId": 38,
+    "fromId": 4,
+    "toId": 44,
+    "security": "Medium",
+    "distance": 10.58
+  },
+  {
+    "routeId": 39,
+    "fromId": 14,
+    "toId": 49,
+    "security": "Low",
+    "distance": 12.1
+  },
+  {
+    "routeId": 40,
+    "fromId": 49,
+    "toId": 26,
+    "security": "High",
+    "distance": 9.05
+  },
+  {
+    "routeId": 41,
+    "fromId": 20,
+    "toId": 34,
+    "security": "Low",
+    "distance": 13.52
+  },
+  {
+    "routeId": 42,
+    "fromId": 34,
+    "toId": 52,
+    "security": "Low",
+    "distance": 3.82
+  },
+  {
+    "routeId": 43,
+    "fromId": 52,
+    "toId": 8,
+    "security": "Medium",
+    "distance": 8.13
+  },
+  {
+    "routeId": 44,
+    "fromId": 8,
+    "toId": 10,
+    "security": "Medium",
+    "distance": 9.27
+  },
+  {
+    "routeId": 45,
+    "fromId": 10,
+    "toId": 30,
+    "security": "High",
+    "distance": 5.76
+  },
+  {
+    "routeId": 46,
+    "fromId": 30,
+    "toId": 2,
+    "security": "Low",
+    "distance": 4.75
+  },
+  {
+    "routeId": 47,
+    "fromId": 30,
+    "toId": 54,
+    "security": "High",
+    "distance": 10
+  },
+  {
+    "routeId": 48,
+    "fromId": 54,
+    "toId": 58,
+    "security": "High",
+    "distance": 7.22
+  },
+  {
+    "routeId": 49,
+    "fromId": 58,
+    "toId": 16,
+    "security": "Medium",
+    "distance": 8.1
+  },
+  {
+    "routeId": 50,
+    "fromId": 16,
+    "toId": 48,
+    "security": "Medium",
+    "distance": 5.68
+  },
+  {
+    "routeId": 51,
+    "fromId": 52,
+    "toId": 24,
+    "security": "Low",
+    "distance": 12.77
+  },
+  {
+    "routeId": 52,
+    "fromId": 30,
+    "toId": 50,
+    "security": "Medium",
+    "distance": 13.23
+  },
+  {
+    "routeId": 53,
+    "fromId": 2,
+    "toId": 29,
+    "security": "Low",
+    "distance": 13.23
+  },
+  {
+    "routeId": 54,
+    "fromId": 43,
+    "toId": 7,
+    "security": "Medium",
+    "distance": 13.78
+  },
+  {
+    "routeId": 55,
+    "fromId": 7,
+    "toId": 21,
+    "security": "Medium",
+    "distance": 9.87
+  },
+  {
+    "routeId": 56,
+    "fromId": 21,
+    "toId": 11,
+    "security": "Medium",
+    "distance": 1.88
+  },
+  {
+    "routeId": 57,
+    "fromId": 11,
+    "toId": 39,
+    "security": "Low",
+    "distance": 4.16
+  },
+  {
+    "routeId": 58,
+    "fromId": 7,
+    "toId": 35,
+    "security": "High",
+    "distance": 13.53
+  },
+  {
+    "routeId": 59,
+    "fromId": 42,
+    "toId": 19,
+    "security": "High",
+    "distance": 13.97
+  },
+  {
+    "routeId": 60,
+    "fromId": 2,
+    "toId": 10,
+    "security": "High",
+    "distance": 7.93
+  },
+  {
+    "routeId": 61,
+    "fromId": 3,
+    "toId": 15,
+    "security": "Low",
+    "distance": 13.66
+  },
+  {
+    "routeId": 62,
+    "fromId": 5,
+    "toId": 15,
+    "security": "Medium",
+    "distance": 14.07
+  },
+  {
+    "routeId": 63,
+    "fromId": 6,
+    "toId": 46,
+    "security": "Low",
+    "distance": 15.72
+  },
+  {
+    "routeId": 64,
+    "fromId": 19,
+    "toId": 14,
+    "security": "Low",
+    "distance": 14.24
+  },
+  {
+    "routeId": 65,
+    "fromId": 21,
+    "toId": 39,
+    "security": "Medium",
+    "distance": 4.49
+  },
+  {
+    "routeId": 66,
+    "fromId": 26,
+    "toId": 14,
+    "security": "Low",
+    "distance": 14.67
+  },
+  {
+    "routeId": 67,
+    "fromId": 34,
+    "toId": 8,
+    "security": "Medium",
+    "distance": 10.94
+  },
+  {
+    "routeId": 68,
+    "fromId": 35,
+    "toId": 21,
+    "security": "High",
+    "distance": 15.19
+  },
+  {
+    "routeId": 69,
+    "fromId": 42,
+    "toId": 41,
+    "security": "Medium",
+    "distance": 11.64
+  },
+  {
+    "routeId": 70,
+    "fromId": 45,
+    "toId": 37,
+    "security": "High",
+    "distance": 15.98
+  }
+]

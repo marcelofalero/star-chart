@@ -1,0 +1,47 @@
+[
+  {
+    "factionId": 1,
+    "name": "Terran Dominion",
+    "color": "#1a3a8f",
+    "glowColor": "#4499ff",
+    "roughness": 0.75,
+    "metalness": 0.2,
+    "description": "Humanity's oldest stellar empire. Commands the central systems with iron discipline."
+  },
+  {
+    "factionId": 2,
+    "name": "Xenoth Collective",
+    "color": "#1a5c30",
+    "glowColor": "#44ff88",
+    "roughness": 0.6,
+    "metalness": 0.4,
+    "description": "A bio-organic hive civilization from the galactic rim. Their worlds are alive."
+  },
+  {
+    "factionId": 3,
+    "name": "Syndicate of Stars",
+    "color": "#8f5a10",
+    "glowColor": "#ffaa44",
+    "roughness": 0.5,
+    "metalness": 0.7,
+    "description": "A ruthless mercantile empire built on secrets, blackmail, and galactic trade."
+  },
+  {
+    "factionId": 4,
+    "name": "The Vanguard",
+    "color": "#5c1a8f",
+    "glowColor": "#cc66ff",
+    "roughness": 0.3,
+    "metalness": 0.9,
+    "description": "A militaristic theocracy devoted to the study and mastery of forbidden technology."
+  },
+  {
+    "factionId": 5,
+    "name": "Scavenger Clans",
+    "color": "#3a3a3a",
+    "glowColor": "#aaaaaa",
+    "roughness": 0.95,
+    "metalness": 0.15,
+    "description": "Nomadic raiders patrolling the dead zones. Feared for their ambushes and salvage expertise."
+  }
+]

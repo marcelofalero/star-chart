@@ -1,0 +1,602 @@
+[
+  {
+    "planetId": 1,
+    "name": "Magellan Zone 1",
+    "x": -19.410384534704335,
+    "y": -11.41979296173429,
+    "z": 6.327456821750501,
+    "factionId": 3,
+    "size": 0.9836164234319973,
+    "description": "Procedurally generated test world 1."
+  },
+  {
+    "planetId": 2,
+    "name": "Sirius Sector 2",
+    "x": 31.16480660232628,
+    "y": -6.213305716879902,
+    "z": 16.80390030247178,
+    "factionId": 4,
+    "size": 1.313861053920018,
+    "description": "Procedurally generated test world 2."
+  },
+  {
+    "planetId": 3,
+    "name": "Centauri Minor 3",
+    "x": 13.194806011922973,
+    "y": 15.980637628922597,
+    "z": -0.7317103597920926,
+    "factionId": 5,
+    "size": 0.806857943970707,
+    "description": "Procedurally generated test world 3."
+  },
+  {
+    "planetId": 4,
+    "name": "Sol Cascadia 4",
+    "x": -35.47436591813904,
+    "y": 5.954798432965638,
+    "z": -13.100531020940544,
+    "factionId": 1,
+    "size": 0.8358363622603879,
+    "description": "Procedurally generated test world 4."
+  },
+  {
+    "planetId": 5,
+    "name": "Rigel Yard 5",
+    "x": -5.403146047750003,
+    "y": 7.784635083173996,
+    "z": -18.84809091274276,
+    "factionId": 4,
+    "size": 1.0918602199222471,
+    "description": "Procedurally generated test world 5."
+  },
+  {
+    "planetId": 6,
+    "name": "Centauri Nexus 6",
+    "x": -18.327954130135602,
+    "y": -19.732439617355098,
+    "z": -17.312467883129653,
+    "factionId": 5,
+    "size": 0.6337921882117292,
+    "description": "Procedurally generated test world 6."
+  },
+  {
+    "planetId": 7,
+    "name": "Magellan Station 7",
+    "x": -33.47273878098787,
+    "y": -8.733611341070176,
+    "z": -2.8891935668394675,
+    "factionId": 2,
+    "size": 1.375116900451975,
+    "description": "Procedurally generated test world 7."
+  },
+  {
+    "planetId": 8,
+    "name": "Dead Hold 8",
+    "x": 29.095461039448523,
+    "y": 4.634325121104945,
+    "z": 10.150096421578997,
+    "factionId": 2,
+    "size": 1.1759533082179123,
+    "description": "Procedurally generated test world 8."
+  },
+  {
+    "planetId": 9,
+    "name": "Fortress Reach 9",
+    "x": -4.760216095970531,
+    "y": -11.697760856232149,
+    "z": 11.957700427251655,
+    "factionId": 3,
+    "size": 0.9037661412883862,
+    "description": "Procedurally generated test world 9."
+  },
+  {
+    "planetId": 10,
+    "name": "Scrap Core 10",
+    "x": 35.679564528788504,
+    "y": -1.5372334295452683,
+    "z": 12.260390714725444,
+    "factionId": 4,
+    "size": 0.8095264658130115,
+    "description": "Procedurally generated test world 10."
+  },
+  {
+    "planetId": 11,
+    "name": "Deneb Hold 11",
+    "x": -34.816352374532315,
+    "y": -16.026228758397597,
+    "z": 3.7857750385797173,
+    "factionId": 3,
+    "size": 0.6020935945688523,
+    "description": "Procedurally generated test world 11."
+  },
+  {
+    "planetId": 12,
+    "name": "Nova Zone 12",
+    "x": -15.75707618071922,
+    "y": -7.7041502293977615,
+    "z": 7.902272673189912,
+    "factionId": 1,
+    "size": 1.2242891703448606,
+    "description": "Procedurally generated test world 12."
+  },
+  {
+    "planetId": 13,
+    "name": "Iron Major 13",
+    "x": -2.977909160584735,
+    "y": -8.546037789167045,
+    "z": 14.192108621505955,
+    "factionId": 4,
+    "size": 1.3593903126337143,
+    "description": "Procedurally generated test world 13."
+  },
+  {
+    "planetId": 14,
+    "name": "Sirius Zone 14",
+    "x": -29.412514067724416,
+    "y": 6.387916433611047,
+    "z": -2.518926134795403,
+    "factionId": 5,
+    "size": 1.2333503158728965,
+    "description": "Procedurally generated test world 14."
+  },
+  {
+    "planetId": 15,
+    "name": "Valkaran Core 15",
+    "x": 5.212026274863337,
+    "y": 13.394327198268066,
+    "z": -11.513240574539774,
+    "factionId": 2,
+    "size": 1.2877243667898877,
+    "description": "Procedurally generated test world 15."
+  },
+  {
+    "planetId": 16,
+    "name": "Rigel Prime 16",
+    "x": 13.922265075760238,
+    "y": -16.93363331449019,
+    "z": 13.625552210047722,
+    "factionId": 5,
+    "size": 0.7201992136373527,
+    "description": "Procedurally generated test world 16."
+  },
+  {
+    "planetId": 17,
+    "name": "Chrysalis Prime 17",
+    "x": -9.936132316263269,
+    "y": -0.1910966750522025,
+    "z": 17.22530813533147,
+    "factionId": 1,
+    "size": 1.2138868467503166,
+    "description": "Procedurally generated test world 17."
+  },
+  {
+    "planetId": 18,
+    "name": "Iron Minor 18",
+    "x": -6.758083263139056,
+    "y": -15.844675744836119,
+    "z": 15.338094587060919,
+    "factionId": 3,
+    "size": 1.1065225407715358,
+    "description": "Procedurally generated test world 18."
+  },
+  {
+    "planetId": 19,
+    "name": "Chrysalis Zone 19",
+    "x": -35.805467761465415,
+    "y": 0.8681626136627818,
+    "z": 8.942452405560974,
+    "factionId": 2,
+    "size": 0.9159240604669948,
+    "description": "Procedurally generated test world 19."
+  },
+  {
+    "planetId": 20,
+    "name": "Bastion Wall 20",
+    "x": 13.346704035658563,
+    "y": 10.491910541318553,
+    "z": 12.719253170608056,
+    "factionId": 4,
+    "size": 1.3805138193678252,
+    "description": "Procedurally generated test world 20."
+  },
+  {
+    "planetId": 21,
+    "name": "Sirius Wall 21",
+    "x": -35.166479623708796,
+    "y": -17.003194817925827,
+    "z": 2.2177389715160833,
+    "factionId": 4,
+    "size": 1.3551627901213665,
+    "description": "Procedurally generated test world 21."
+  },
+  {
+    "planetId": 22,
+    "name": "Dead Hub 22",
+    "x": 15.406066223656403,
+    "y": -2.2219057897575656,
+    "z": -6.696092678578198,
+    "factionId": 4,
+    "size": 0.8956192703278716,
+    "description": "Procedurally generated test world 22."
+  },
+  {
+    "planetId": 23,
+    "name": "Beta Station 23",
+    "x": 6.04187171632625,
+    "y": 3.25906614864905,
+    "z": 17.378215356025933,
+    "factionId": 1,
+    "size": 0.9159265057969294,
+    "description": "Procedurally generated test world 23."
+  },
+  {
+    "planetId": 24,
+    "name": "Syndicate Zone 24",
+    "x": 39.96194038724994,
+    "y": 14.52773352707283,
+    "z": 3.4931455041685178,
+    "factionId": 3,
+    "size": 0.8489514036225515,
+    "description": "Procedurally generated test world 24."
+  },
+  {
+    "planetId": 25,
+    "name": "Valkaran Reach 25",
+    "x": 4.127323600409047,
+    "y": -5.581869475039429,
+    "z": 17.371360033204418,
+    "factionId": 3,
+    "size": 1.09837647492103,
+    "description": "Procedurally generated test world 25."
+  },
+  {
+    "planetId": 26,
+    "name": "Deneb Prime 26",
+    "x": -35.078249253003435,
+    "y": 19.42916370720272,
+    "z": -6.136042264000552,
+    "factionId": 4,
+    "size": 1.1028614429331016,
+    "description": "Procedurally generated test world 26."
+  },
+  {
+    "planetId": 27,
+    "name": "Deneb Nexus 27",
+    "x": 5.835629938872904,
+    "y": 2.8863251895149267,
+    "z": -0.8462406274348844,
+    "factionId": 5,
+    "size": 1.3067579638558113,
+    "description": "Procedurally generated test world 27."
+  },
+  {
+    "planetId": 28,
+    "name": "Dead Sector 28",
+    "x": -20.01988995656874,
+    "y": -3.130200105667451,
+    "z": -17.75355227951799,
+    "factionId": 1,
+    "size": 0.7186645727901781,
+    "description": "Procedurally generated test world 28."
+  },
+  {
+    "planetId": 29,
+    "name": "Xen Nexus 29",
+    "x": 37.515493376240485,
+    "y": -17.637797551441096,
+    "z": 18.875317869215884,
+    "factionId": 4,
+    "size": 0.9935588013905073,
+    "description": "Procedurally generated test world 29."
+  },
+  {
+    "planetId": 30,
+    "name": "Xen Sector 30",
+    "x": 31.1569439219873,
+    "y": -5.102389655754509,
+    "z": 12.185814102893051,
+    "factionId": 5,
+    "size": 0.8958040643970155,
+    "description": "Procedurally generated test world 30."
+  },
+  {
+    "planetId": 31,
+    "name": "Rigel Core 31",
+    "x": 3.1212442118575368,
+    "y": -10.691623784589744,
+    "z": 1.4488278919909803,
+    "factionId": 4,
+    "size": 1.3520372230743483,
+    "description": "Procedurally generated test world 31."
+  },
+  {
+    "planetId": 32,
+    "name": "Bastion Sector 32",
+    "x": 6.281537580387866,
+    "y": 16.682284304952137,
+    "z": 12.833913210688133,
+    "factionId": 4,
+    "size": 0.6072549146261966,
+    "description": "Procedurally generated test world 32."
+  },
+  {
+    "planetId": 33,
+    "name": "Iron Hub 33",
+    "x": 13.823041144572423,
+    "y": -12.339100855565007,
+    "z": -9.61055816602055,
+    "factionId": 4,
+    "size": 1.1422411262695482,
+    "description": "Procedurally generated test world 33."
+  },
+  {
+    "planetId": 34,
+    "name": "Xen Cascadia 34",
+    "x": 24.974341916352223,
+    "y": 14.241724056358933,
+    "z": 6.918018917289777,
+    "factionId": 2,
+    "size": 1.1021274007320878,
+    "description": "Procedurally generated test world 34."
+  },
+  {
+    "planetId": 35,
+    "name": "Chrysalis Reach 35",
+    "x": -35.28877664715944,
+    "y": -17.572407854453584,
+    "z": -12.964209660621364,
+    "factionId": 3,
+    "size": 1.1575057937508397,
+    "description": "Procedurally generated test world 35."
+  },
+  {
+    "planetId": 36,
+    "name": "Shield Hold 36",
+    "x": -3.649722849335051,
+    "y": 16.06982102757172,
+    "z": -12.92571664233753,
+    "factionId": 5,
+    "size": 0.7117313275752307,
+    "description": "Procedurally generated test world 36."
+  },
+  {
+    "planetId": 37,
+    "name": "Deneb Sector 37",
+    "x": 36.7369166147859,
+    "y": -2.885158084676278,
+    "z": -12.328999959936024,
+    "factionId": 2,
+    "size": 0.8484763433268389,
+    "description": "Procedurally generated test world 37."
+  },
+  {
+    "planetId": 38,
+    "name": "Sirius Hub 38",
+    "x": -16.283445931863483,
+    "y": -2.10453342849374,
+    "z": -12.989716124807892,
+    "factionId": 2,
+    "size": 1.1743079933403249,
+    "description": "Procedurally generated test world 38."
+  },
+  {
+    "planetId": 39,
+    "name": "Syndicate Sector 39",
+    "x": -38.93598968514229,
+    "y": -15.562806240693682,
+    "z": 4.180204975605291,
+    "factionId": 2,
+    "size": 1.1193546669481367,
+    "description": "Procedurally generated test world 39."
+  },
+  {
+    "planetId": 40,
+    "name": "Centauri Core 40",
+    "x": -2.6280598549978684,
+    "y": 7.768933953021997,
+    "z": 3.108183551492343,
+    "factionId": 5,
+    "size": 1.0146444255570708,
+    "description": "Procedurally generated test world 40."
+  },
+  {
+    "planetId": 41,
+    "name": "Scrap Core 41",
+    "x": -14.437240143516785,
+    "y": 7.80595610704629,
+    "z": 15.813927744583856,
+    "factionId": 1,
+    "size": 1.365915306991937,
+    "description": "Procedurally generated test world 41."
+  },
+  {
+    "planetId": 42,
+    "name": "Iron Cascadia 42",
+    "x": -22.085713903882525,
+    "y": 3.389524047504282,
+    "z": 8.22672412301333,
+    "factionId": 1,
+    "size": 0.6190373041482703,
+    "description": "Procedurally generated test world 42."
+  },
+  {
+    "planetId": 43,
+    "name": "Syndicate Minor 43",
+    "x": -29.469789900549898,
+    "y": 3.2252091386050807,
+    "z": -8.448157366900508,
+    "factionId": 3,
+    "size": 0.9961446053820602,
+    "description": "Procedurally generated test world 43."
+  },
+  {
+    "planetId": 44,
+    "name": "Syndicate Yard 44",
+    "x": -29.117242830334806,
+    "y": 12.499425282216293,
+    "z": -18.462944534107915,
+    "factionId": 1,
+    "size": 0.7028380613026514,
+    "description": "Procedurally generated test world 44."
+  },
+  {
+    "planetId": 45,
+    "name": "Sirius Sector 45",
+    "x": 34.794290794038716,
+    "y": -18.688525914062133,
+    "z": -13.64427656644474,
+    "factionId": 3,
+    "size": 0.91406371616691,
+    "description": "Procedurally generated test world 45."
+  },
+  {
+    "planetId": 46,
+    "name": "Dead Nexus 46",
+    "x": -15.96777159474307,
+    "y": -9.888814414985681,
+    "z": -5.281546965440618,
+    "factionId": 3,
+    "size": 0.6151724590045152,
+    "description": "Procedurally generated test world 46."
+  },
+  {
+    "planetId": 47,
+    "name": "Deneb Cascadia 47",
+    "x": 25.782119699671817,
+    "y": -17.748442725753257,
+    "z": -9.260370278214879,
+    "factionId": 3,
+    "size": 0.93489472799882,
+    "description": "Procedurally generated test world 47."
+  },
+  {
+    "planetId": 48,
+    "name": "Dead Core 48",
+    "x": 15.39969708190192,
+    "y": -16.484937985263173,
+    "z": 8.154502269497051,
+    "factionId": 5,
+    "size": 1.120326609314674,
+    "description": "Procedurally generated test world 48."
+  },
+  {
+    "planetId": 49,
+    "name": "Centauri Station 49",
+    "x": -38.105473640907135,
+    "y": 14.204218068716044,
+    "z": 0.6089466625470719,
+    "factionId": 1,
+    "size": 0.7675061912780257,
+    "description": "Procedurally generated test world 49."
+  },
+  {
+    "planetId": 50,
+    "name": "Syndicate Major 50",
+    "x": 32.20585001096261,
+    "y": -15.16433106664865,
+    "z": 3.6596128081415946,
+    "factionId": 3,
+    "size": 0.6684502662971916,
+    "description": "Procedurally generated test world 50."
+  },
+  {
+    "planetId": 51,
+    "name": "Shield Hub 51",
+    "x": -10.175059456763265,
+    "y": 13.287233895513047,
+    "z": 11.285511297406003,
+    "factionId": 3,
+    "size": 0.923620999442669,
+    "description": "Procedurally generated test world 51."
+  },
+  {
+    "planetId": 52,
+    "name": "Bastion Minor 52",
+    "x": 28.171735137381617,
+    "y": 12.38758925811807,
+    "z": 7.899230270379958,
+    "factionId": 1,
+    "size": 1.3886889753014926,
+    "description": "Procedurally generated test world 52."
+  },
+  {
+    "planetId": 53,
+    "name": "Syndicate Zone 53",
+    "x": 25.02316677755531,
+    "y": 2.1022356149577393,
+    "z": -13.002746371869991,
+    "factionId": 1,
+    "size": 1.3108431653797292,
+    "description": "Procedurally generated test world 53."
+  },
+  {
+    "planetId": 54,
+    "name": "Scrap Sector 54",
+    "x": 21.550622942528594,
+    "y": -5.14832751393711,
+    "z": 9.411764885794147,
+    "factionId": 1,
+    "size": 0.7844375161844299,
+    "description": "Procedurally generated test world 54."
+  },
+  {
+    "planetId": 55,
+    "name": "Deneb Reach 55",
+    "x": -2.5152925472433463,
+    "y": 18.378150416613277,
+    "z": -4.607463461663075,
+    "factionId": 1,
+    "size": 0.785302286808632,
+    "description": "Procedurally generated test world 55."
+  },
+  {
+    "planetId": 56,
+    "name": "Beta Core 56",
+    "x": -20.456472309152247,
+    "y": -10.299624093878638,
+    "z": -17.840409031100535,
+    "factionId": 2,
+    "size": 1.2491310729592096,
+    "description": "Procedurally generated test world 56."
+  },
+  {
+    "planetId": 57,
+    "name": "Iron Wall 57",
+    "x": 9.424627097102514,
+    "y": 7.056480825961078,
+    "z": -2.788932972511007,
+    "factionId": 2,
+    "size": 1.3427946880555566,
+    "description": "Procedurally generated test world 57."
+  },
+  {
+    "planetId": 58,
+    "name": "Centauri Wall 58",
+    "x": 16.55982041003262,
+    "y": -9.365603693627328,
+    "z": 12.473436578195845,
+    "factionId": 2,
+    "size": 0.8700882591792403,
+    "description": "Procedurally generated test world 58."
+  },
+  {
+    "planetId": 59,
+    "name": "Scrap Hub 59",
+    "x": -7.084820368998095,
+    "y": -17.11532541915551,
+    "z": 5.368746993938034,
+    "factionId": 5,
+    "size": 0.7190040097590826,
+    "description": "Procedurally generated test world 59."
+  },
+  {
+    "planetId": 60,
+    "name": "Shield Major 60",
+    "x": -18.655391144819262,
+    "y": 12.546521016197296,
+    "z": 7.03207599003945,
+    "factionId": 2,
+    "size": 0.6975338876176557,
+    "description": "Procedurally generated test world 60."
+  }
+]
